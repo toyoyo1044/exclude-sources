@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source Restriction Policy"
+  short_description: "Enforce configurable source restrictions"
+  default_prompt: "Use $ban-sources to apply or maintain technical source restrictions and source-priority policies."
