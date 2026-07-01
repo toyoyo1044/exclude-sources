@@ -1,22 +1,22 @@
 ---
-name: ban-sources
-description: Enforce and maintain configurable technical information-source restrictions and source-priority policies. Use when researching, debugging, implementing, designing, reviewing, or explaining technical topics, and when updating source allow/deny rules for technical work.
+name: exclude-sources
+description: Apply and maintain configurable technical information-source exclusions and source-priority policies. Use when researching, debugging, implementing, designing, reviewing, or explaining technical topics, and when updating source inclusion or exclusion rules for technical work.
 ---
 
 # Technical Source Policy
 
 ## Purpose
 
-Apply durable source restrictions and source-quality rules during technical work. Treat every active policy entry as a mandatory constraint.
+Apply durable source exclusions and source-quality rules during technical work. Treat every active policy entry as a mandatory constraint.
 
 ## Operating Rules
 
 - Follow every active entry in `Policy Entries`.
-- Do not open, summarize, cite, or rely on a forbidden source.
-- Ignore forbidden sources in search results and continue with allowed sources.
+- Do not open, summarize, cite, or rely on an excluded source.
+- Ignore excluded sources in search results and continue with other sources.
 - Add each relevant `Search exclusions` value when the search tool supports exclusions.
 - Prefer primary and official sources. Use secondary sources only when preferred sources do not answer the practical question.
-- If sufficient evidence cannot be found without forbidden sources, state that no primary or trustworthy source was found and do not use the forbidden sources.
+- If sufficient evidence cannot be found without excluded sources, state that no primary or trustworthy source was found and do not use the excluded sources.
 
 ## Source Priority
 
@@ -32,7 +32,7 @@ Prefer sources in this order:
 
 ## Policy Entries
 
-### Prohibited Technical Article Platforms
+### Excluded Technical Article Platforms
 
 Status: active
 
@@ -43,7 +43,7 @@ Targets:
 - Qiita
 - Zenn
 
-Forbidden domains:
+Excluded domains:
 
 - `qiita.com`
 - `*.qiita.com`
@@ -69,8 +69,8 @@ Required behavior:
 When adding or changing an information-source policy:
 
 1. Keep the frontmatter `description` generic and broad enough to trigger for technical research and source-policy maintenance.
-2. Add or update an entry under `Policy Entries` using `Status`, `Scope`, `Targets`, `Forbidden domains`, `Search exclusions`, and `Required behavior`.
-3. When adding a site or service to an existing entry, update `Targets`, `Forbidden domains`, and `Search exclusions`. Change `Required behavior` only when the behavior itself changes.
+2. Add or update an entry under `Policy Entries` using `Status`, `Scope`, `Targets`, `Excluded domains`, `Search exclusions`, and `Required behavior`.
+3. When adding a site or service to an existing entry, update `Targets`, `Excluded domains`, and `Search exclusions`. Change `Required behavior` only when the behavior itself changes.
 4. List both the bare domain and wildcard subdomains when the rule covers both, such as `example.com` and `*.example.com`.
 5. Keep search exclusions copyable as one `text` block. Add one `-site:<domain>` exclusion for each searchable bare domain.
 6. Update `Source Priority` only when the general ranking changes for every policy.

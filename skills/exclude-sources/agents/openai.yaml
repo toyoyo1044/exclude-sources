@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source Exclusion Policy"
+  short_description: "Apply configurable source exclusions"
+  default_prompt: "Use $exclude-sources to apply or maintain technical source exclusions and source-priority policies."
